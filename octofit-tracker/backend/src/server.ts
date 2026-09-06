@@ -47,13 +47,16 @@ app.get('/api/teams', async (_request, response, next) => {
   }
 });
 
-app.get('/api/leaderboard', async (_request, response, next) => {
+const getLeaderboard = async (_request: express.Request, response: express.Response, next: express.NextFunction) => {
   try {
     response.json(await Leaderboard.find().sort({ rank: 1 }).populate('userId', 'displayName username').lean());
   } catch (error) {
     next(error);
   }
-});
+};
+
+app.get('/api/leaderboard', getLeaderboard);
+app.get('/api/leaderboards', getLeaderboard);
 
 app.get('/api/workouts', async (_request, response, next) => {
   try {
