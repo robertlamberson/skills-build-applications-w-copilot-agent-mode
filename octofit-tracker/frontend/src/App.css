@@ -1,0 +1,41 @@
+.app-shell { min-height: 100vh; }
+.topbar { align-items: center; background: #10231d; color: #f6f8f4; display: flex; justify-content: space-between; padding: 1rem 5vw; }
+.brand { font-size: 1.35rem; font-weight: 800; text-decoration: none; letter-spacing: -.04em; }
+.brand-mark { color: #c2f36b; margin-right: .35rem; }
+nav { display: flex; flex-wrap: wrap; gap: .25rem; }
+.nav-link { border-radius: 999px; color: #bbcac0; font-size: .85rem; padding: .5rem .75rem; text-decoration: none; }
+.nav-link:hover, .nav-link.active { background: #294239; color: #fff; }
+main { margin: 0 auto; max-width: 1180px; padding: 4rem 5vw 5rem; }
+.overview { max-width: 800px; padding: 4rem 0 2rem; }
+.eyebrow { color: #6b8f35; font-size: .76rem; font-weight: 800; letter-spacing: .15em; margin: 0 0 1rem; text-transform: uppercase; }
+h1 { font-size: clamp(3rem, 8vw, 6.5rem); letter-spacing: -.08em; line-height: .92; margin: 0; }
+h1 span { color: #6b8f35; }
+.hero-copy { color: #64736b; font-size: 1.15rem; margin: 2rem 0; max-width: 480px; }
+.overview-actions { align-items: center; display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.primary-button { background: #10231d; border-radius: 999px; color: #fff; padding: .8rem 1.25rem; text-decoration: none; }
+.primary-button:hover { background: #294239; }
+.text-link { color: #45612b; font-weight: 700; text-decoration: none; }
+.overview-grid { border-top: 1px solid #d9e0d7; display: grid; gap: 1rem; grid-template-columns: repeat(3, 1fr); margin-top: 6rem; padding-top: 1.5rem; }
+.overview-grid div { display: flex; flex-direction: column; gap: .25rem; }
+.overview-grid strong { font-size: 2.5rem; letter-spacing: -.08em; }
+.overview-grid span, .page-description, .data-card p, .data-card small { color: #718078; }
+.page-section { padding-top: 1rem; }
+.page-heading { align-items: end; border-bottom: 1px solid #d9e0d7; display: flex; justify-content: space-between; margin-bottom: 2rem; padding-bottom: 1.5rem; }
+.page-heading h1 { font-size: clamp(2.5rem, 6vw, 5rem); }
+.page-description { margin: 1rem 0 0; }
+.record-count { background: #e8f2d5; border-radius: 999px; color: #45612b; font-size: .8rem; padding: .45rem .8rem; }
+.collection-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.data-card, .state-card { background: #fff; border: 1px solid #e0e6dd; border-radius: 1rem; padding: 1.5rem; }
+.data-card h2 { font-size: 1.15rem; margin: 1rem 0 .35rem; }
+.data-card p { margin: 0 0 .75rem; }
+.data-card small { display: block; font-size: .85rem; }
+.avatar, .card-icon, .rank { align-items: center; background: #e8f2d5; border-radius: 50%; color: #52732b; display: flex; font-weight: 800; height: 3rem; justify-content: center; width: 3rem; }
+.card-icon { font-size: 1.4rem; }
+.rank-card { align-items: center; display: flex; gap: 1rem; }
+.rank-card h2 { margin: 0 0 .3rem; }
+.rank { background: #10231d; color: #c2f36b; flex: 0 0 auto; }
+.difficulty { color: #6b8f35; font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.error-state { color: #a43d3d; }
+footer { border-top: 1px solid #d9e0d7; color: #849087; font-size: .75rem; padding: 1rem 5vw; text-align: center; }
+footer code { color: #45612b; }
+@media (max-width: 760px) { .topbar, .page-heading { align-items: flex-start; flex-direction: column; gap: 1rem; } nav { gap: 0; } .overview-grid { margin-top: 4rem; } }
