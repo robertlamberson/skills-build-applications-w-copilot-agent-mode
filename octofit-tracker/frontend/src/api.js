@@ -12,8 +12,8 @@ export function getItems(payload) {
   return []
 }
 
-export async function fetchCollection(collection) {
-  const response = await fetch(`${apiBaseUrl}/${collection}/`)
+export async function fetchCollection(collection, endpoint = `${apiBaseUrl}/${collection}`) {
+  const response = await fetch(`${endpoint}/`)
   if (!response.ok) {
     throw new Error(`Unable to load ${collection} (${response.status})`)
   }
