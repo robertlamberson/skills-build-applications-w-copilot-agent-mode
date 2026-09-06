@@ -1,6 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import { Activity, User } from './models/index.js';
+import { Activity, Leaderboard, Team, User, Workout } from './models/index.js';
 
 export const app = express();
 const port = Number(process.env.PORT) || 8000;
@@ -34,6 +34,30 @@ app.get('/api/users', async (_request, response, next) => {
 app.get('/api/activities', async (_request, response, next) => {
   try {
     response.json(await Activity.find().sort({ completedAt: -1 }).populate('userId', 'displayName username').lean());
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.get('/api/teams', async (_request, response, next) => {
+  try {
+    response.json(await Team.find().sort({ name: 1 }).lean());
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.get('/api/leaderboard', async (_request, response, next) => {
+  try {
+    response.json(await Leaderboard.find().sort({ rank: 1 }).populate('userId', 'displayName username').lean());
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.get('/api/workouts', async (_request, response, next) => {
+  try {
+    response.json(await Workout.find().sort({ name: 1 }).lean());
   } catch (error) {
     next(error);
   }
